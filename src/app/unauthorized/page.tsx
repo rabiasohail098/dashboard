@@ -45,8 +45,8 @@ const Error: FC = () => {
         </div>
       </section>
 <div className="flex  flex-col text-center items-center  mx-auto w-full md:w-[630px] justify-center  h-auto top-{530} left-{645} py-10 px-4 md:px-8 lg:px-12 gap-6 rounded-[6px]">
-<h2 className="text-[64px] md:w-[630px] w-full md:text-[80px] lg:text-[96px] font-bold font-helvetica text-[#FF9F0D]">403</h2>
-<h4 className="w-full text-[32px] font-bold font-helvetica text-[#333333]">Unauthorized Access</h4>
+<h2 className="text-[64px] md:w-[630px] w-full md:text-[80px] lg:text-[96px] font-bold  text-[#FF9F0D]">403</h2>
+<h4 className="w-full text-[32px] font-bold  text-[#333333]">Unauthorized Access</h4>
 <p className="text-[18px] w-full font-bold font-inter text-[#4F4F4F] px-4">You do not have permission to access this page.</p>
 <a
            href="https://q-commerce-food-tuck.vercel.app/"
