@@ -53,28 +53,28 @@ const Nav = () => {
       <div className="w-full flex flex-col lg:px-[100px] px-[20px] bg-[#0D0D0D]  text-white lg:py-[20px] py-[10px]">
         <div className="hidden lg:flex justify-between items-center">
           <ul className="text-whitetext flex gap-[10px] font-medium leading-[24px] text-[15px]">
-            <Link href={"/"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Home</li>
             </Link>
-            <Link href={"/menu"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/menu"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Menu</li>
             </Link>
-            <Link href={"/blog"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/blog"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Blog</li>
             </Link>
-            <Link href={"/chef"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/chef"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Chef</li>
             </Link>
-            <Link href={"/about"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/about"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">About</li>
             </Link>
-            <Link href={"/shop"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/shop"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Shop</li>
             </Link>
-            <Link href={"/sign-in"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/sign-in"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Signin</li>
             </Link>
-            <Link href={"/sign-up"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/sign-up"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Signup</li>
             </Link>
                   </ul>
@@ -111,7 +111,7 @@ const Nav = () => {
                 </div>
               )}
             </div>
-            <Link href="/addtocart">
+            <Link href="https://q-commerce-food-tuck.vercel.app/addtocart">
               <div className="relative">
                 <HiOutlineShoppingBag className="text-whitetext text-[24px] cursor-pointer" />
                 {cart.length > 0 && (
@@ -122,7 +122,7 @@ const Nav = () => {
               </div>
             </Link>
 
-            <Link href="/wishlist">
+            <Link href="https://q-commerce-food-tuck.vercel.app/wishlist">
               <div className="relative">
                 <HeartIcon className="text-whitetext text-[24px] cursor-pointer" />
                 {cart.length > 0 && (
@@ -133,7 +133,7 @@ const Nav = () => {
               </div>
             </Link>
 
-            <Link href="/sign-in">
+            <Link href="https://q-commerce-food-tuck.vercel.app/sign-in">
               <div className="relative mt-3">
                 <span className="text-whitetext text-[28px]  cursor-pointer">
                 <UserButton/>
@@ -151,28 +151,28 @@ const Nav = () => {
             </SheetTrigger>
             <SheetContent>
               <ul className="flex flex-col gap-[10px] font-medium text-[16px] text-orange-500">
-                <Link href={"/"}>
+                <Link href={"https://q-commerce-food-tuck.vercel.app/"}>
                   <li className="font-medium hover:text-bordercoloryello">Home</li>
                 </Link>
-                <Link href={"/menu"}>
+                <Link href={"https://q-commerce-food-tuck.vercel.app/menu"}>
                   <li className="font-medium hover:text-bordercoloryello">Menu</li>
                 </Link>
-                <Link href={"/blog"}>
+                <Link href={"https://q-commerce-food-tuck.vercel.app/blog"}>
                   <li className="font-medium hover:text-bordercoloryello">Blog</li>
                 </Link>
-                <Link href={"/chef"}>
+                <Link href={"https://q-commerce-food-tuck.vercel.app/chef"}>
                   <li className="font-medium hover:text-bordercoloryello">Chef</li>
                 </Link>
-                <Link href={"/about"}>
+                <Link href={"https://q-commerce-food-tuck.vercel.app/about"}>
                   <li className="font-medium hover:text-bordercoloryello">About</li>
                 </Link>
-                <Link href={"/shop"}>
+                <Link href={"https://q-commerce-food-tuck.vercel.app/shop"}>
                   <li className="font-medium hover:text-bordercoloryello">Shop</li>
                 </Link>
-                <Link href={"/sign-in"}>
+                <Link href={"https://q-commerce-food-tuck.vercel.app/sign-in"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Signin</li>
             </Link>
-            <Link href={"/sign-up"}>
+            <Link href={"https://q-commerce-food-tuck.vercel.app/sign-up"}>
               <li className="w-[45px] h-[24px] font-medium leading-[24px]">Signup</li>
             </Link>
               </ul>
@@ -195,7 +195,7 @@ const Nav = () => {
                         key={product.title}
                         className="px-4 py-2 text-black hover:bg-gray-200 cursor-pointer"
                       >
-                        <Link href={`/products/${product._id}`}>{product.title}</Link>
+                        <Link href={`https://q-commerce-food-tuck.vercel.app/products/${product._id}`}>{product.title}</Link>
                       </li>
                     ))}
                   </ul>
@@ -203,7 +203,7 @@ const Nav = () => {
               )}
               </div>
               <div className="flex gap-6">
-              <Link href="/addtocart">
+              <Link href="https://q-commerce-food-tuck.vercel.app/addtocart">
               <div className="relative mt-4">
                 <HiOutlineShoppingBag className="text-whitetext text-orange-500 text-[24px] cursor-pointer" />
                 {cart.length > 0 && (
@@ -214,7 +214,7 @@ const Nav = () => {
               </div>
             </Link>
 
-            <Link href="/wishlist">
+            <Link href="https://q-commerce-food-tuck.vercel.app/wishlist">
               <div className="relative mt-4">
                 <HeartIcon className="text-whitetext text-orange-500 text-[24px] cursor-pointer" />
                 {cart.length > 0 && (
