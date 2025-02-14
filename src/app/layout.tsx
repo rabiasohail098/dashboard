@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
 import Bottom from "@/components/bottom";
 import { Great_Vibes } from "next/font/google";
 import Nav from "@/components/nav";
@@ -30,7 +29,6 @@ export default function RootLayout({
         <body className={inter.className}>
           <Nav />
           {children}
-          <Footer />
           <Bottom />
         </body>
       </html>

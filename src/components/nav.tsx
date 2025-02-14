@@ -6,11 +6,11 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { UserButton, useUser } from "@clerk/nextjs";
+import { UserButton} from "@clerk/nextjs";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
-import { HeartIcon, User2, User2Icon } from "lucide-react";
+import { HeartIcon } from "lucide-react";
 
 
 const Nav = () => {
@@ -142,7 +142,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-
+        
         {/* Mobile Menu */}
         <div className="lg:hidden flex justify-between px-[30px]">
           <Sheet>

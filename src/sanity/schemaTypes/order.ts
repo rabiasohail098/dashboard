@@ -36,6 +36,19 @@ export default {
       title: "State",
     },
     {
+      name: "status",
+      type: "string",
+      title: "Status",
+      options: {
+        list: [
+          { title: "Pending", value: "pending" },
+          { title: "Processing", value: "processing" },
+          { title: "Success", value: "success" },
+          { title: "Cancelled", value: "cancelled" },
+        ],
+      },
+    },
+    {
       name: "zipCode",
       type: "string",
       title: "Zip Code",
@@ -56,7 +69,7 @@ export default {
             {
               name: "food",
               type: "reference",
-              to: [{ type: "foods" }], // ✅ Ye ab sahi kaam karega
+              to: [{ type: "foods" }], // Ensure "food" schema exists
             },
             {
               name: "quantity",
@@ -71,6 +84,6 @@ export default {
           ],
         },
       ],
-    },
+    }
   ],
 };

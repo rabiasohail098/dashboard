@@ -18,7 +18,7 @@ const Hero = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start mt-6">
-            <Link href="/menu">
+            <Link href="/admin">
               <button className="bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 text-white w-[130px] sm:w-[160px] md:w-[190px] h-[40px] sm:h-[50px] md:h-[60px] rounded-[40px]">
                 Go to Dashboard
               </button>

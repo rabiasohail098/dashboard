@@ -24,9 +24,7 @@ const Bottom = () => {
           <div className="w-9 h-9 flex items-center justify-center rounded bg-white hover:bg-gray-300 transition">
            <Link href="www.youtube.com/@Parniya098"><FaYoutube size={18} className="text-[#FF9F0D]" /></Link> 
           </div>
-          <div className="w-9 h-9 flex items-center justify-center rounded bg-white hover:bg-gray-300 transition">
-            <Image src="/images/pa.png" alt="Logo" width={16} height={18} className="w-4 h-4" />
-          </div>
+         
         </div>
       </div>
     </div>
