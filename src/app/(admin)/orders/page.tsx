@@ -22,13 +22,13 @@ interface Order {
   cartitems: { _id: string; name: string; status: string; totalAmount: number }[];
 }
 
-const mockOrdersQuery = `*[_type=="order"]{
+const query = `*[_type == "order"]{
   _id,
   name,
   status,
   totalAmount,
   _updatedAt,
-  cartItems[] {
+  cartItems[]->{
     _id,
     name,
     status,
@@ -51,24 +51,21 @@ export default function Order() {
   useEffect(() => {
     async function fetchOrders() {
       try {
-        const fetchedOrders = await client.fetch(mockOrdersQuery);
-        const mappedOrders = fetchedOrders.map((order: any) => ({
-          _id: order._id,
-          name: order.name,
-          date: order._updatedAt,
-          status: order.status,
-          total: order.totalAmount,
-          cartitems: order.cartItems,
-        }));
-        setOrders(mappedOrders ?? []);
+        const fetchedOrders = await client.fetch(query);
+        console.log("Fetched Orders:", JSON.stringify(fetchedOrders, null, 2)); // Debugging
+  
+        if (!Array.isArray(fetchedOrders)) {
+          throw new Error("Invalid Data Format");
+        }
+  
+        setOrders(fetchedOrders);
       } catch (error) {
         console.error("Error fetching orders:", error);
-        setOrders([]);
+        setOrders([]); // Empty array set kardo taake crash na ho
       }
     }
     fetchOrders();
   }, []);
-
   return (
     <div className="space-y-6 p-6  min-h-screen">
       <div className="flex items-center justify-between">
@@ -108,7 +105,7 @@ export default function Order() {
             >
               <CardHeader className=" p-4 border-b">
                 <CardTitle className="text-lg font-semibold flex items-center gap-2">
-                  <StatusIcon className="w-5 h-5 text-gray-400" />
+                  <StatusIcon className="w-5 h-5 text-gray-700" />
                   <span className="text-gray-400">Order #{order._id}</span>
                 </CardTitle>
                 <Badge className={cn("text-sm font-medium capitalize px-3 py-1 rounded-full", {
@@ -124,7 +121,7 @@ export default function Order() {
               <CardContent className="space-y-3 p-4">
                 <div className="flex items-center gap-3">
                   <User className="w-4 h-4 text-gray-500" />
-                  <span className="font-bold text-gray-300">{order.name ?? "Unknown"}</span>
+                  <span className="font-bold text-gray-400">{order.name ?? "Unknown"}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CalendarDays className="w-4 h-4 text-gray-500" />
@@ -134,7 +131,7 @@ export default function Order() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Package className="w-4 h-4 text-gray-500" />
-                  <span className="text-gray-600">{order.cartitems?.length ?? 0} item{order.cartitems?.length !== 1 ? "s" : ""}</span>
+                  <span className="text-gray-300">{order.cartitems?.length ?? 0} item{order.cartitems?.length !== 1 ? "s" : ""}</span>
                 </div>
               </CardContent>
 
@@ -143,7 +140,7 @@ export default function Order() {
                   <p className="text-sm text-gray-500">Total Amount</p>
                   <p className="text-xl font-bold text-gray-400">${order.total ? order.total.toFixed(2) : "0.00"}</p>
                 </div>
-                <Button variant="outline" size="sm" className="gap-2 text-gray-300 hover:bg-gray-400">
+                <Button variant="outline" size="sm" className="gap-2 text-gray-400 hover:bg-gray-100">
                   Details <ArrowRight className="w-4 h-4" />
                 </Button>
               </CardFooter>
@@ -151,6 +148,9 @@ export default function Order() {
           );
         })}
       </div>
+      <div>
+
+</div>
     </div>
   );
 }
